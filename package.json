@@ -1,0 +1,17 @@
+{
+  "name": "kase-social",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/nCally/kase.git",
+  "author": "nCally <cartrf@live.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.1.3",
+    "jsonwebtoken": "^8.5.1",
+    "sequelize": "^5.21.11",
+    "sqlite3": "^4.2.0"
+  }
+}
