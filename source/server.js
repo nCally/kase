@@ -1,20 +1,29 @@
 
 const express = require("express");
-const db = require("./db")
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const db = require("./db");
+const routes = require("./routes");
 
 const server = express();
 
-server.get("/", (req, res) => res.send("Text"))
+server.use(bodyParser.urlencoded({ extended: false }));
+server.use(bodyParser.json());
+
+const origin = { origin: '*', }
+server.use(cors(origin));
+
+server.use(routes);
 
 const PORT = process.env.PORT || "8000";
 
 
 db.sync()
-    .then(() => {
-        server.listen(PORT, () => {
-            console.log(`app running on ${PORT}`);
-        })
+  .then(() => {
+    server.listen(PORT, () => {
+      console.log(`app running on ${PORT}`);
     })
-    .catch(error => {
-        throw error;
-    })
+  })
+  .catch(error => {
+    throw error;
+  })
