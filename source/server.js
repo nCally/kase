@@ -5,6 +5,8 @@ const cors = require("cors");
 const db = require("./db");
 const routes = require("./routes");
 
+require('dotenv').config();
+
 const server = express();
 
 server.use(bodyParser.urlencoded({ extended: false }));
@@ -13,7 +15,7 @@ server.use(bodyParser.json());
 const origin = { origin: '*', }
 server.use(cors(origin));
 
-server.use(routes);
+server.use('/api', routes);
 
 const PORT = process.env.PORT || "8000";
 
