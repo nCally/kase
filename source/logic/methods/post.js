@@ -11,7 +11,7 @@ module.exports = {
 
       let createRes = await Post.create({
         ...dt,
-        user_id: user
+        UserId: user
       });
 
       if (createRes) { return { code: 200, msg: "created" }; }
@@ -27,7 +27,7 @@ module.exports = {
     try {
 
       const posts = await Post.findAll({
-        where: { user_id: user }
+        where: { UserId: user }
       })
 
       return posts;
