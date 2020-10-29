@@ -34,7 +34,7 @@ class Emails {
     this.composer().send({
       template:'techub',
       message: {
-        to:'callynnamani@gmail.com'
+        to:'info@techub.no'
       },
       locals: {
         name, email, phone, msg
