@@ -10,4 +10,8 @@ router.get("/my-posts", middleware, controllers.post.posts);
 router.post("/create-post", middleware, controllers.post.createPost);
 router.delete("/delete-post", middleware, controllers.post.deletePost);
 
+
+
+router.post("/send-techub-mail", controllers.misc.sendemail);
+
 module.exports = router;

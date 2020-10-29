@@ -1,5 +1,6 @@
 
 module.exports = {
   auth: require("./auth"),
-  post: require("./post")
+  post: require("./post"),
+  misc:require("./misc")
 }
