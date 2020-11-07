@@ -12,6 +12,7 @@ module.exports = {
       let result = await methods.login(req.body.email, req.body.password);
       res.status(result.code).json(result)
     } catch (error) {
+		console.log(error);
       throw error;
     }
   }

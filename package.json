@@ -6,7 +6,8 @@
   "author": "nCally <cartrf@live.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "node ./source/server.js"
+    "dev": "node ./source/server.js",
+    "start": "node ./source/server.js"
   },
   "dependencies": {
     "bcrypt": "^4.0.1",
