@@ -12,6 +12,6 @@ router.delete("/delete-post", middleware, controllers.post.deletePost);
 
 
 
-router.post("/send-techub-mail", controllers.misc.sendemail);
+// router.post("/send-techub-mail", controllers.misc.sendemail);
 
 module.exports = router;
